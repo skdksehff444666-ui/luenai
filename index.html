@@ -1,81 +1,338 @@
-<!DOCTYPE html>
+<!-- index.html (v2) -->
+<!doctype html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>luenAI - Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container {
-            background: #ffffff;
-            padding: 50px 40px;
-            border-radius: 10px;
-            width: 350px;
-            text-align: center;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            margin-bottom: 15px;
-            color: #222;
-        }
-
-        p {
-            margin-bottom: 30px;
-            color: #666;
-            font-size: 14px;
-        }
-
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            text-decoration: none;
-            background: #007bff;
-            color: #fff;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: background 0.2s;
-        }
-
-        .btn:hover {
-            background: #0056b3;
-        }
-
-        .footer {
-            margin-top: 20px;
-            font-size: 12px;
-            color: #999;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>luenAI - Home</title>
+  <meta name="description" content="luenAI - AI Development Platform" />
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
+  <div class="bg">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="glow g1" aria-hidden="true"></div>
+    <div class="glow g2" aria-hidden="true"></div>
+    <div class="glow g3" aria-hidden="true"></div>
+  </div>
 
-<div class="container">
+  <header class="header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="luenAI 홈">
+        <span class="brand-mark">◎</span>
+        <span class="brand-text">luenAI</span>
+      </a>
 
-    <h1>luenAI</h1>
-    <p>AI Development Platform</p>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="#features">기능</a>
+        <a href="#how">사용 방법</a>
+        <a href="#pricing">요금</a>
+        <a href="#support">지원</a>
+      </nav>
 
-    <a href="login.html" class="btn">로그인</a>
-    <a href="register.html" class="btn">회원가입</a>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="login.html">로그인</a>
+        <a class="btn btn-primary" href="register.html">회원가입</a>
+      </div>
 
-    <div class="footer">
-        © 2026 luenAI v1
+      <button class="hamburger" type="button" aria-label="메뉴 열기" aria-expanded="false" data-menu-btn>
+        <span></span><span></span><span></span>
+      </button>
     </div>
 
-</div>
+    <div class="mobile-menu" data-menu>
+      <a href="#features">기능</a>
+      <a href="#how">사용 방법</a>
+      <a href="#pricing">요금</a>
+      <a href="#support">지원</a>
+      <div class="mobile-actions">
+        <a class="btn btn-ghost" href="login.html">로그인</a>
+        <a class="btn btn-primary" href="register.html">회원가입</a>
+      </div>
+    </div>
+  </header>
 
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="pill">
+            <span class="dot"></span>
+            <span>v2 런칭 · 빠른 시작</span>
+          </div>
+
+          <h1>
+            AI 개발을 <span class="grad">더 빠르고</span><br />
+            <span class="grad2">더 안정적으로</span>
+          </h1>
+
+          <p class="sub">
+            luenAI는 모델 실험, 배포, 모니터링을 한곳에서 관리하는
+            AI Development Platform 입니다.
+          </p>
+
+          <div class="cta">
+            <a class="btn btn-primary btn-lg" href="register.html">무료로 시작하기</a>
+            <a class="btn btn-ghost btn-lg" href="#features">기능 보기</a>
+          </div>
+
+          <div class="meta">
+            <div class="meta-item">
+              <div class="meta-k">99.9%</div>
+              <div class="meta-v">서비스 안정성</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-k">1-Click</div>
+              <div class="meta-v">배포 파이프라인</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-k">Realtime</div>
+              <div class="meta-v">모니터링</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="card glass">
+            <div class="card-top">
+              <div class="chip">Console</div>
+              <div class="lights">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="kpi">
+                <div class="kpi-item">
+                  <div class="kpi-title">Deploy</div>
+                  <div class="kpi-value">SUCCESS</div>
+                </div>
+                <div class="kpi-item">
+                  <div class="kpi-title">Latency</div>
+                  <div class="kpi-value">84ms</div>
+                </div>
+                <div class="kpi-item">
+                  <div class="kpi-title">Tokens</div>
+                  <div class="kpi-value">1.2M</div>
+                </div>
+              </div>
+
+              <div class="log">
+                <div class="log-line"><span class="ok">✓</span> build completed</div>
+                <div class="log-line"><span class="ok">✓</span> tests passed (128)</div>
+                <div class="log-line"><span class="ok">✓</span> deploy to production</div>
+                <div class="log-line"><span class="warn">•</span> monitoring enabled</div>
+              </div>
+
+              <div class="card-actions">
+                <a class="btn btn-primary" href="login.html">대시보드</a>
+                <a class="btn btn-ghost" href="#support">문서</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mini mini-a glass" aria-hidden="true">
+            <div class="mini-title">Requests</div>
+            <div class="mini-val">+24%</div>
+            <div class="spark"></div>
+          </div>
+
+          <div class="mini mini-b glass" aria-hidden="true">
+            <div class="mini-title">Errors</div>
+            <div class="mini-val">0.03%</div>
+            <div class="spark"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>핵심 기능</h2>
+          <p>프로덕션까지 필요한 흐름을 정리했습니다.</p>
+        </div>
+
+        <div class="grid">
+          <article class="feat glass">
+            <div class="icon">⚡</div>
+            <h3>빠른 실험</h3>
+            <p>프롬프트/모델 버전 관리와 실험 비교를 간단하게.</p>
+          </article>
+
+          <article class="feat glass">
+            <div class="icon">🧩</div>
+            <h3>워크플로우</h3>
+            <p>데이터 → 학습 → 배포 파이프라인을 한 번에 연결.</p>
+          </article>
+
+          <article class="feat glass">
+            <div class="icon">🛡️</div>
+            <h3>보안</h3>
+            <p>권한/키 관리, 감사 로그로 운영 안전성 강화.</p>
+          </article>
+
+          <article class="feat glass">
+            <div class="icon">📈</div>
+            <h3>모니터링</h3>
+            <p>지연/비용/에러율을 실시간으로 추적.</p>
+          </article>
+
+          <article class="feat glass">
+            <div class="icon">🧠</div>
+            <h3>평가</h3>
+            <p>벤치마크·휴먼 평가를 통해 품질을 수치화.</p>
+          </article>
+
+          <article class="feat glass">
+            <div class="icon">🔌</div>
+            <h3>통합</h3>
+            <p>API/SDK로 기존 서비스에 손쉽게 연동.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section soft">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>3단계 시작</h2>
+          <p>처음부터 운영까지 빠르게 진입합니다.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step glass">
+            <div class="step-num">01</div>
+            <div class="step-body">
+              <h3>가입 & 키 발급</h3>
+              <p>프로젝트 생성 후 API 키를 발급합니다.</p>
+            </div>
+          </div>
+
+          <div class="step glass">
+            <div class="step-num">02</div>
+            <div class="step-body">
+              <h3>테스트 & 평가</h3>
+              <p>샌드박스에서 실험하고 기준 지표로 검증합니다.</p>
+            </div>
+          </div>
+
+          <div class="step glass">
+            <div class="step-num">03</div>
+            <div class="step-body">
+              <h3>배포 & 모니터링</h3>
+              <p>원클릭 배포 후, 지표를 보며 안정적으로 운영합니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>요금</h2>
+          <p>필요에 따라 확장하세요.</p>
+        </div>
+
+        <div class="pricing">
+          <div class="plan glass">
+            <div class="plan-head">
+              <h3>Starter</h3>
+              <div class="price">₩0<span>/월</span></div>
+              <p>개인/테스트용</p>
+            </div>
+            <ul>
+              <li>기본 실험 관리</li>
+              <li>제한된 요청량</li>
+              <li>커뮤니티 지원</li>
+            </ul>
+            <a class="btn btn-ghost" href="register.html">시작</a>
+          </div>
+
+          <div class="plan glass featured">
+            <div class="badge">추천</div>
+            <div class="plan-head">
+              <h3>Pro</h3>
+              <div class="price">₩39,000<span>/월</span></div>
+              <p>팀/프로덕션 시작</p>
+            </div>
+            <ul>
+              <li>고급 평가/비교</li>
+              <li>원클릭 배포</li>
+              <li>실시간 모니터링</li>
+            </ul>
+            <a class="btn btn-primary" href="register.html">무료 체험</a>
+          </div>
+
+          <div class="plan glass">
+            <div class="plan-head">
+              <h3>Enterprise</h3>
+              <div class="price">문의<span></span></div>
+              <p>대규모/보안 요구</p>
+            </div>
+            <ul>
+              <li>SLA/전용 지원</li>
+              <li>SSO/권한관리</li>
+              <li>온프렘/전용 VPC</li>
+            </ul>
+            <a class="btn btn-ghost" href="#support">상담</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" class="cta-strip">
+      <div class="wrap cta-strip-inner glass">
+        <div>
+          <h2>바로 시작해볼까요?</h2>
+          <p>문서/지원이 필요하면 언제든지 도와드립니다.</p>
+        </div>
+        <div class="cta-strip-actions">
+          <a class="btn btn-primary btn-lg" href="register.html">회원가입</a>
+          <a class="btn btn-ghost btn-lg" href="login.html">로그인</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        <div class="brand small">
+          <span class="brand-mark">◎</span>
+          <span class="brand-text">luenAI</span>
+        </div>
+        <div class="foot-note">© 2026 luenAI. All rights reserved.</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#features">기능</a>
+        <a href="#pricing">요금</a>
+        <a href="#support">지원</a>
+        <a href="login.html">로그인</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const btn = document.querySelector("[data-menu-btn]");
+      const menu = document.querySelector("[data-menu]");
+      if (!btn || !menu) return;
+
+      btn.addEventListener("click", () => {
+        const open = menu.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+
+      menu.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", () => {
+          menu.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
